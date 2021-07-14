@@ -1,0 +1,15 @@
+.details__container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.details__card {
+    display: flex;
+    align-items: center;
+    margin-block: 2em;
+}
+
+.details__info {
+    padding: 2em;
+}

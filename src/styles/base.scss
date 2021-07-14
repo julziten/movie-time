@@ -1,0 +1,9 @@
+body {
+    padding: 2em;
+}
+
+@import './components/movietime';
+@import './components/search';
+@import './components/details';
+@import './components/favorites';
+@import './components/results';
