@@ -1,3 +1,11 @@
+# Simple MovieTime App - Created with React using The Movie Database API
+
+You can see the deployed application here: https://julziten.github.io/movie-time
+
+# React features implemented:
+
+Functional Components, React Hooks, Custom Hooks, Reducers, LocalStorage, Simple Styles with Sass, Redux, React Router
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
