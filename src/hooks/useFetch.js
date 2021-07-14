@@ -18,7 +18,6 @@ export const useFetch = ( url ) => {
         fetch( url )
             .then( resp => resp.json() )
             .then( data => { 
-                // caso de uso real del useRef
                     if (isMounted.current) {
                         setState({
                             loading: false,
