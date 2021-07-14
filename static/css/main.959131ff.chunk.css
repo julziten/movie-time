@@ -1,0 +1,2 @@
+body{padding:2em}form{padding-block:2em}.search__form,.search__input{width:100%}.search__favorites{padding-block:1em}.details__container{display:flex;align-items:flex-start;flex-direction:column}.details__card{display:flex;align-items:center;margin-block:2em}.details__info{padding:2em}@media(min-width:320px)and (max-width:480px){.details__card,.details__image{display:flex;flex-direction:column}.details__image{align-items:center}img{width:300px}}.favorites__box,.results__container{display:flex;flex-wrap:wrap}
+/*# sourceMappingURL=main.959131ff.chunk.css.map */
