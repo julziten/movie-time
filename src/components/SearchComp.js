@@ -25,7 +25,6 @@ export const SearchComp = () => {
     return (
 
         <>
-
             <form onSubmit={ handleSearch } className="search__form">
 
                 <Search 
@@ -50,7 +49,6 @@ export const SearchComp = () => {
                 className="search__favorites">
                 Go To Favorites
             </Link>
-
             
         </>
     )

@@ -4,11 +4,12 @@ import { useFetch } from '../hooks/useFetch';
 import { apiKey } from '../helpers/apiKey';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Button, Card, Rate } from 'antd';
+import { Button, Rate } from 'antd';
 
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 
 import { types } from '../types/types';
+import { replaceImgWithError } from '../helpers/replaceImg';
 
 export const Details = ( { history } ) => {
 
@@ -89,7 +90,8 @@ export const Details = ( { history } ) => {
                             <h2> {data.original_title} </h2>
                             <img 
                                 alt={`This is "${ data.title }" movie`} 
-                                src={`https://image.tmdb.org/t/p/w500${ data.poster_path }`} />
+                                src={`https://image.tmdb.org/t/p/w500${ data.poster_path }`} 
+                                onError={ replaceImgWithError }/>
                         </div>
 
                         <div className="details__info">

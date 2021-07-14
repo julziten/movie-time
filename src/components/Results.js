@@ -25,7 +25,6 @@ export const Results = ( { movie } ) => {
                 )
             }
 
-
         </div>
     )
 }
