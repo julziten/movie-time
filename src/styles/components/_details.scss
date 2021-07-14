@@ -13,3 +13,22 @@
 .details__info {
     padding: 2em;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .details__card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details__image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 300px;
+    }
+    
+  }
