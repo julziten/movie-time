@@ -4,13 +4,11 @@ import { useFetch } from '../hooks/useFetch';
 import { apiKey } from '../helpers/apiKey';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Button, Card } from 'antd';
+import { Button, Card, Rate } from 'antd';
 
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 
 import { types } from '../types/types';
-
-const { Meta } = Card;
 
 export const Details = ( { history } ) => {
 
@@ -18,7 +16,7 @@ export const Details = ( { history } ) => {
 
     const { id } = useParams();
 
-    const isFav = state.some( item => item.id === id )
+    const isFav = state.some( item => item.id === id );
 
     const [favorite, toggleFav] = useState(isFav);
 
@@ -97,22 +95,30 @@ export const Details = ( { history } ) => {
                         <div className="details__info">
                             <p>Overview: {data.overview}</p>
                             <p>Popularity: {data.popularity}</p>
-                            <p>Vote Avegare: {data.vote_average} </p>
+                            <Rate 
+                                disabled 
+                                allowHalf 
+                                defaultValue={ data.vote_average / 2 }
+                                style={{marginBottom: '1em'}}    
+                            />
                             <p>Release Date: {data.release_date}</p>
                             <p>Original Language: {data.original_language}</p>
+
+                            { 
+                                favorite !== true
+                                ? 
+                                    <HeartOutlined 
+                                    style={ {fontSize: '20px'} }
+                                    onClick={ handleFavorite } /> 
+                                :
+                                    <HeartFilled 
+                                    style={ {fontSize: '20px'} }
+                                    onClick={ handleFavorite } />
+                            }
+
                         </div>
 
-                        { 
-                            favorite !== true
-                            ? 
-                                <HeartOutlined 
-                                style={ {fontSize: '20px'} }
-                                onClick={ handleFavorite } /> 
-                            :
-                                <HeartFilled 
-                                style={ {fontSize: '20px'} }
-                                onClick={ handleFavorite } />
-                        }
+                        
 
                     </div>
     
