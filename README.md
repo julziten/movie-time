@@ -31,8 +31,10 @@ You will also see any lint errors in the console.
 
 ## Dependencies Used
 
-sass  
-ant design
+Sass  
+Ant Design
+Redux
+React Router
 
 
 ## The Moviedb API
